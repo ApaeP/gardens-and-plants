@@ -1,0 +1,12 @@
+<h1>New tag for the plant</h1>
+
+<%= simple_form_for([@plant, @plant_tag]) do |f| %>
+  <%= f.association :tag, input_html: {
+                            multiple: true,
+                            data: {
+                              controller: 'tom-select'
+                            }
+                          },
+                          include_hidden: false %>
+  <%= f.submit %>
+<% end %>
